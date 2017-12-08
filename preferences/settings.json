@@ -1,0 +1,27 @@
+{
+  "workbench.startupEditor": "none",
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+  },
+  "files.autoSave": "afterDelay",
+  "editor.renderWhitespace": "all",
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "gitlens.advanced.messages": {
+      "suppressCommitHasNoPreviousCommitWarning": false,
+      "suppressCommitNotFoundWarning": false,
+      "suppressFileNotUnderSourceControlWarning": false,
+      "suppressGitVersionWarning": false,
+      "suppressLineUncommittedWarning": false,
+      "suppressNoRepositoryWarning": false,
+      "suppressUpdateNotice": false,
+      "suppressWelcomeNotice": true
+  },
+  "workbench.colorTheme": "Atom One Dark",
+  "editor.fontSize": 13,
+  "explorer.openEditors.visible": 0,
+  "javascript.validate.enable": false,
+  "editor.tabCompletion": true
+}

@@ -1,0 +1,50 @@
+{
+	"Product Style": {
+		"prefix": "product-style",
+		"body": [
+			".product {",
+			"  padding: 10px;",
+			"  width: 250px;",
+			"  height: 250px;",
+			"}"
+		],
+		"description": "Product Style"
+	},
+	"Product Description Style": {
+		"prefix": "product-description-style",
+		"body": [
+			".product__description {",
+			"  text-align: center;",
+			"  color: #1a1a1a;",
+			"  font-size: 14px;",
+			"}",
+			"",
+			".product__description__colour {",
+			"  color: #999;",
+			"}",
+			""
+		],
+		"description": "Product Description Style"
+	},
+	"Products Style": {
+		"prefix": "products-style",
+		"body": [
+			".products {",
+			"  display: flex;",
+			"  flex-wrap: wrap;",
+			"  justify-content: space-between;",
+			"}"
+		],
+		"description": "Products Style"
+	},
+	"Product Image Style": {
+		"prefix": "product-image-style",
+		"body": [
+			".product__image {",
+			"  text-align: center;",
+			"}",
+			""
+		],
+		"description": "Product Image Style"
+	}
+}

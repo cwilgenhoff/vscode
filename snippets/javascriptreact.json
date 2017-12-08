@@ -1,0 +1,131 @@
+{
+	"Product Hover": {
+		"prefix": "product-hover",
+		"body": [
+			"toggleProductHover = () => {",
+			"    this.setState({",
+			"      isProductHovered: !this.state.isProductHovered,",
+			"    });",
+			"  }"
+		],
+		"description": "Product Hover"
+	},
+	"Product Thumbnail": {
+		"prefix": "product-thumbnail",
+		"body": [
+			"getThumbnailSource = () =>  {",
+			"      getThumbnailSource = () =>  {",
+			"    const FIRST_THUMBNAIL = 0;",
+			"    const SECOND_THUMBNAIL = 1;",
+			"",
+			"    const { thumbnails } = this.props;",
+			"    const { isProductHovered } = this.state;",
+			"",
+			"    if (!thumbnails || thumbnails.lenght === 0) {",
+			"      return '';",
+			"    }",
+			"",
+			"    if (isProductHovered) {",
+			"      return thumbnails && thumbnails[SECOND_THUMBNAIL];",
+			"    }",
+			"",
+			"    return thumbnails && thumbnails[FIRST_THUMBNAIL];",
+			"  }"
+		],
+		"description": "product-thumbnail"
+	},
+	"Product Render": {
+		"prefix": "product-render",
+		"body": [
+			"render() {",
+			"    const {",
+			"      name = '',",
+			"      colour = '',",
+			"      price = '£0'",
+			"    } = this.props;",
+			"",
+			"    return (",
+			"      <div",
+			"        className='product'",
+			"        onMouseEnter={this.toggleProductHover}",
+			"        onMouseLeave={this.toggleProductHover}",
+			"      >",
+			"        <ProductImage",
+			"          image={this.getThumbnailSource()}",
+			"          name={name}",
+			"        />",
+			"        <ProductDescription",
+			"          name={name}",
+			"          colour={colour}",
+			"          price={price}",
+			"        />",
+			"      </div>",
+			"    );",
+			"}"
+		],
+		"description": "Product Render"
+	},
+	"Product Description": {
+		"prefix": "product-description",
+		"body": [
+			"import React from 'react';",
+			"import './style.css';",
+			"",
+			"const ProductDescription = ({ name = '', colour = '', price = '£0' }) => (",
+			"  <div className='product__description'>",
+			"    <div>{name}</div>",
+			"    <div className='product__description__colour'>{colour}</div>",
+			"    <div>{price}</div>",
+			"  </div>",
+			");",
+			"",
+			"export default ProductDescription;",
+			""
+		],
+		"description": "Product Description"
+	},
+	"Product Image": {
+		"prefix": "product-image",
+		"body": [
+			"import React from 'react';",
+			"import './style.css';",
+			"",
+			"const ProductImage = ({ image = '', name = '', width = '200', height = '200' }) => (",
+			"  <div className='product__image'>",
+			"    <img",
+			"      src={image}",
+			"      alt={name}",
+			"      width={width}",
+			"      height={height}",
+			"    />",
+			"  </div>",
+			");",
+			"",
+			"export default ProductImage;",
+			""
+		],
+		"description": "Product Image"
+	},
+	"Products Render": {
+		"prefix": "products-render",
+		"body": [
+			"render() {",
+			"    const { products } = this.state;",
+			"    return (",
+			"      <div className='products'>",
+			"        { products && products.map(product =>",
+			"          <Product",
+			"            key={uuid()}",
+			"            name={product.name}",
+			"            thumbnails={product.thumbnails}",
+			"            colour={product.colour}",
+			"            price={product.price}",
+			"          />",
+			"        )}",
+			"      </div>",
+			"    )",
+			"  }"
+		],
+		"description": "Products Render"
+	}
+}
